@@ -2,6 +2,10 @@
 
 language: r
 
+arch: 
+- amd64
+- ppc64le
+
 os:
 - linux
 - osx
@@ -22,6 +26,18 @@ matrix:
   exclude:
   - os: osx
     r: devel
+  - arch: ppc64le
+    os: osx
+    r: oldrel
+  - arch: ppc64le
+    os: osx
+    r: release
+  - arch: ppc64le
+    os: osx
+    r: devel
+  - arch: ppc64le
+    os: osx
+    r: 3.3.0
 
 before_install:
 - cd pkg
